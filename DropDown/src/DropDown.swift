@@ -890,7 +890,7 @@ extension DropDown {
 
 		accessibilityViewIsModal = true
 		UIAccessibility.post(notification: .screenChanged, argument: self)
-
+        	UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, DropDown.tableview.visibleCells.first)
 		//deselectRows(at: selectedRowIndices)
 		selectRows(at: selectedRowIndices)
 
